@@ -30,9 +30,25 @@ namespace Nest.Tests.Unit.Search.Query.ConditionlessBool
 		public void CombinationResultsInNullQuery()
 		{
 			this.DoSemiConditionlessQuery(q => q.Terms(p => p.Name, new string[] { this._c.Name1 }) && q.Term(p => p.Name, this._c.Name1));
-			this.DoSemiConditionlessQuery(q => q.Terms(p => p.Name, new string[] { this._c.Name1 }) || q.Term(p => p.Name, this._c.Name1));
+            this.DoSemiConditionlessQuery(q => q.Terms(p => p.Name, new string[] { this._c.Name1 }) || q.Term(p => p.Name, this._c.Name1));
 			this.DoSemiConditionlessQuery(q => !q.Terms(p => p.Name, new string[] { this._c.Name1 }) || !q.Term(p => p.Name, this._c.Name1));
 		}
+
+        [Test]
+	    public void FilteredNullQuery()
+        {
+            this.DoSemiConditionlessQuery(Filename: "Filtered",
+                query: q => q
+                .Filtered(fq => fq
+                    .Query(qs =>
+                        qs.Match(m => m
+                            .OnField("_all")
+                            .Query(this._c.Name1)) ||
+                        qs.Fuzzy(fu =>
+                            fu.OnField("_all").Value(this._c.Name1)))
+                    .Filter(f => new BaseFilter())));
+        }
+
 		[Test]
 		public void IfOneOfTwoIsNotConditionlessKeepIt()
 		{

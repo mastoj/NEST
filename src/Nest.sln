@@ -1,5 +1,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nest", "Nest\Nest.csproj", "{072BA7DA-7B60-407D-8B6E-95E3186BE70C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nest.Tests.Integration", "Nest.Tests.Integration\Nest.Tests.Integration.csproj", "{9E38CD2C-EEFD-4C82-B0CD-D0608C27D64F}"
@@ -142,11 +144,11 @@ Global
 		{B9FE4875-0171-40F7-A357-064A93BE09C6}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{B9FE4875-0171-40F7-A357-064A93BE09C6}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{B9FE4875-0171-40F7-A357-064A93BE09C6}.Release|x86.ActiveCfg = Release|Any CPU
-		{56A87048-9065-459B-826D-3DF68B409845}.CodeGeneration|Any CPU.ActiveCfg = Debug - Generator|Any CPU
-		{56A87048-9065-459B-826D-3DF68B409845}.CodeGeneration|Any CPU.Build.0 = Debug - Generator|Any CPU
-		{56A87048-9065-459B-826D-3DF68B409845}.CodeGeneration|Mixed Platforms.ActiveCfg = Debug - Generator|Any CPU
-		{56A87048-9065-459B-826D-3DF68B409845}.CodeGeneration|Mixed Platforms.Build.0 = Debug - Generator|Any CPU
-		{56A87048-9065-459B-826D-3DF68B409845}.CodeGeneration|x86.ActiveCfg = Debug - Generator|Any CPU
+		{56A87048-9065-459B-826D-3DF68B409845}.CodeGeneration|Any CPU.ActiveCfg = Release|Any CPU
+		{56A87048-9065-459B-826D-3DF68B409845}.CodeGeneration|Any CPU.Build.0 = Release|Any CPU
+		{56A87048-9065-459B-826D-3DF68B409845}.CodeGeneration|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{56A87048-9065-459B-826D-3DF68B409845}.CodeGeneration|Mixed Platforms.Build.0 = Release|Any CPU
+		{56A87048-9065-459B-826D-3DF68B409845}.CodeGeneration|x86.ActiveCfg = Release|Any CPU
 		{56A87048-9065-459B-826D-3DF68B409845}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{56A87048-9065-459B-826D-3DF68B409845}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56A87048-9065-459B-826D-3DF68B409845}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU

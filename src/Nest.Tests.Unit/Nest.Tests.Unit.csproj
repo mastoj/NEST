@@ -430,6 +430,7 @@
     <None Include="Search\Filter\BoolFilterMerges\ShouldNotJoinMustNotIntoMustStrictFilterInverse.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="Search\Query\ConditionlessBool\Filtered.json" />
     <None Include="Search\Query\Singles\MultiMatch\TestMultiMatchJson.json" />
     <None Include="Search\Query\Modes\VerbatimDoesNotThrowOnEmptyTerm.json" />
     <None Include="Search\Query\Singles\Terms\TermsQueryDescriptorUsingExternalField.json" />

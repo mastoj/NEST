@@ -65,7 +65,7 @@ namespace Nest
 
 		public static BaseQuery operator |(BaseQuery leftQuery, BaseQuery rightQuery)
 		{
-			var defaultQuery = new BaseQuery() { IsConditionless = true };
+		    var defaultQuery = Query<object>.MatchAll();// new BaseQuery() { IsConditionless = true };}
 			leftQuery = leftQuery ?? defaultQuery;
 			rightQuery = rightQuery ?? defaultQuery;
 			var combined = new[] { leftQuery, rightQuery };
