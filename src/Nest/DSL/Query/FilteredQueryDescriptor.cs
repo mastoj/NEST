@@ -9,8 +9,22 @@ namespace Nest
 	[JsonObject(MemberSerialization = MemberSerialization.OptIn)]
 	public class FilteredQueryDescriptor<T> : IQuery where T : class
 	{
-		[JsonProperty(PropertyName = "query")]
-		internal BaseQuery _Query { get; set; }
+        private BaseQuery _matchAllQuery = Query<object>.MatchAll();
+        private BaseQuery _query;
+        [JsonProperty(PropertyName = "query")]
+	    internal BaseQuery _Query
+	    {
+	        get
+	        {
+	            if (_query.IsConditionless)
+	                return _matchAllQuery;
+	            return _query;
+	        }
+	        set
+	        {
+	            _query = value;
+	        }
+	    }
 
 		[JsonProperty(PropertyName = "filter")]
 		internal BaseFilter _Filter { get; set; }
