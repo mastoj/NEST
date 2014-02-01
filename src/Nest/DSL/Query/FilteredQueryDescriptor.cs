@@ -16,7 +16,7 @@ namespace Nest
 	    {
 	        get
 	        {
-	            if (_query.IsConditionless)
+	            if (_query != null && _query.IsConditionless)
 	                return _matchAllQuery;
 	            return _query;
 	        }
